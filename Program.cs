@@ -29,7 +29,7 @@ app.MapGet("/videos", () =>
     string fileName;
     Dictionary<string, string> vidList = new Dictionary<string, string>();
 
-    foreach (var file in Directory.EnumerateFiles(vidDir, "*.mp4")
+    foreach (var file in Directory.EnumerateFiles(vidDir, "*.mp4"))
     {
         fileName = Path.GetFileName(file);
         vidList.Add(fileName, file);
